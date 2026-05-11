@@ -1,6 +1,6 @@
-Submitted by: Chan Park (cpark49)
+Submitted by: Chan Park 
 
-Group Members: Chan Park (cpark49)
+Group Members: Chan Park
 
 App Description: MoodPup asks users how they are feeling and gives them a supportive message. The app also displays a random dog image or video to help improve the user’s mood.
 
@@ -10,6 +10,6 @@ APIs: Random Dog API (https://random.dog/woof.json)
 
 Contact Email: cpark97@terpmail.umd.edu
 
-Deployed App Link: ADD_YOUR_RENDER_LINK_HERE
+Deployed App Link: https://moodpup.onrender.com
 
-AI Use: 1. ChatGPT
+AI Use: 1. Claude

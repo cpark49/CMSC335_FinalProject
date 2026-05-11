@@ -25,7 +25,7 @@ function getMoodMessage(mood) {
   if (mood === "happy") {
     return `That is great to hear!
 I hope your day keeps going well.
-Enjoy this dog content to celebrate your happiness :)`;
+Enjoy this dog to celebrate your happiness :)`;
   }
 
   if (mood === "mad") {
