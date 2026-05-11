@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Mood Result</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Your Mood: <%= mood %>
+        </h1>
+
+        <p style="white-space: pre-line;" class="message">
+            <%= message %>
+        </p>
+
+        <% if (isVideo) { %>
+
+            <video
+                class="dog-media"
+                src="<%= dogUrl %>"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline>
+            </video>
+
+        <% } else { %>
+
+            <img
+                class="dog-media"
+                src="<%= dogUrl %>"
+                alt="Random Dog">
+
+        <% } %>
+
+        <br>
+        <br>
+
+        <a href="/">
+            Return Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

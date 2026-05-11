@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>MoodPup</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>MoodPup</h1>
+
+        <p>
+            How are you feeling today?
+        </p>
+
+        <form action="/submit" method="POST">
+
+            <select name="mood" required>
+
+                <option value="">
+                    Select a mood
+                </option>
+
+                <option value="happy">
+                    Happy
+                </option>
+
+                <option value="mad">
+                    Mad
+                </option>
+
+                <option value="depressed">
+                    Depressed
+                </option>
+
+                <option value="stressed">
+                    Stressed
+                </option>
+
+            </select>
+
+            <br>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>
