@@ -63,11 +63,8 @@ router.get("/", async (req, res) => {
 router.post("/submit", async (req, res) => {
 
   const selectedMood = req.body.mood;
-
   const message = getMoodMessage(selectedMood);
-
   const apiResponse = await fetch("https://random.dog/woof.json");
-
   const dogData = await apiResponse.json();
 
   const isVideo =
@@ -82,12 +79,40 @@ router.post("/submit", async (req, res) => {
 
   await newMood.save();
 
+  const allMoods = await Mood.find();
+
+  const moodCounts = {};
+
+  allMoods.forEach(item => {
+
+    if (moodCounts[item.mood]) {
+      moodCounts[item.mood]++;
+    } else {
+      moodCounts[item.mood] = 1;
+    }
+
+  });
+
+  let mostCommonMood = "None";
+
+  for (let mood in moodCounts) {
+    if (
+      mostCommonMood === "None" ||
+      moodCounts[mood] > moodCounts[mostCommonMood]
+    ) {
+      mostCommonMood = mood;
+    }
+  }
+
   res.render("result", {
     mood: selectedMood,
     message: message,
     dogUrl: dogData.url,
-    isVideo: isVideo
+    isVideo: isVideo,
+    totalMoods: allMoods.length,
+    mostCommonMood: mostCommonMood
   });
+
 });
 
 app.use("/", router);
