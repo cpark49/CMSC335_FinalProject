@@ -90,3 +90,11 @@ a {
     font-size: 18px;
     font-weight: bold;
 }
+
+.summary-box {
+    background-color: #fff4cc;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 14px;
+    border: 3px solid #ffd166;
+}
